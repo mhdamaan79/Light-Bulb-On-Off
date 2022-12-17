@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #051937;
+  }
+  
+  .main-container.on {
+    background: radial-gradient(#555,#111);
+  }
+  
+  .bulb {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #444;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .main-container.on .bulb {
+    background: #fff;
+    box-shadow: 0 0 50px #fff,  0 0 100px #fff,
+       0 0 150px #fff,  0 0 200px #fff,
+       0 0 250px #fff,  0 0 300px #fff,
+       0 0 350px #fff;
+  }
+  
+  .bulb::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 100px;
+    top: -55px;
+    left: 32px;
+    background: #444;
+    border-top: 30px solid #A8EB12;
+    border-radius: 10px;
+  }
+  
+  .main-container.on .bulb::before {
+    background: #fff;
+  }
+  
+  .main-container.on .bulb::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -25px;
+    left: -25px;
+    background: #fff;
+    border-radius: 50%;
+    filter: blur(40px); 
+  }
+  
+  .bulb span:nth-child(1) {
+    position: absolute;
+    top: -17px;
+    left: 4.8px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+  /*   background: yellow; */
+    border-bottom-right-radius: 40px;
+    transform: rotate(349deg);
+    box-shadow: 20px 20px 0 10px #444;
+  }
+  
+  .bulb span:nth-child(2) {
+    position: absolute;
+    top: -18px;
+    right: 5.9px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+  /*   background: yellow; */
+    border-bottom-right-radius: 40px;
+    transform: rotate(101deg);
+    box-shadow: 20px 20px 0 10px #444;
+  }
+  
+  .main-container.on .bulb span:nth-child(1)  {
+    box-shadow: 20px 20px 0 10px #fff;
+  }
+  
+  .main-container.on .bulb span:nth-child(2)  {
+    box-shadow: 20px 20px 0 10px #fff;
+  }
+  
+  .bulb-wire {
+    position: absolute;
+    width: 4px;
+    height: 60vh;
+    background: #A8EB12;
+    bottom: 50%;
+    z-index: 1;
+  }
+  
+  .switch-container {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+    background-image: linear-gradient(to right top, #69a4ff, #00caff, #00e7f1, #00fa9a, #bbff21);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .switch-container .button {
+    position: relative;
+    width: 25px;
+    height: 40px;
+    background: #4A596E;
+    border: 2px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .switch-container .button::before {
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 85%;
+    top: 0;
+    left: 0;
+    background: #A8EB12;
+    border-radius: 4px;
+  }
+  
+  .on .switch-container .button::before {
+    top: 15%;
+  }
+  
+  
+  
+  
+  
